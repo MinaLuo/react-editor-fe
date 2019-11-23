@@ -1,6 +1,6 @@
 import api from '../../api/index'
 const API  =new api()
-const loginUrl='http://172.20.10.5:3000/login';
+const loginUrl='http://172.20.10.5:3000/auth/login';
 const registerUrl='http://172.20.10.5:3000/register';
 
 function login(data) {

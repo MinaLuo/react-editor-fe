@@ -19,13 +19,16 @@ class Login extends React.Component {
       if (!err) {
         serve.login(values).then((res) => {
           console.log(res)
+          if(res.code == '200'){
+            this.props.history.push({pathname:'/pageList'});
+          }
         })
       }
     });
   };
   register(){
     serve.register({username: this.state.username,password: this.state.password}).then((res) => {
-      console.log(res)
+      console.log(res,'res-----')
     })
   };
   onInputChange=e=>{
