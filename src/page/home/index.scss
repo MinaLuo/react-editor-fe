@@ -4,22 +4,33 @@
     .home-top{
         width:100%;
         height:50px;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 30px;
+        box-shadow: 0 2px 8px #f0f1f2;
+        .home-left{
+            padding-left:20px;
+            line-height: 50px;
+            font-size: 20px;
+            color: #555;
+        }
+        .home-right .ant-menu-horizontal{
+           border-bottom: 0;
+        }
     }
-    .home-content{
+    .home-down{
         width:100%;
         height:calc(100% - 50px);
         display: flex;
         flex-direction: row;
-        .home-menu{
-            width:200px;
+        padding-top:30px;
+        .home-left{
+            width:300px;
             height:100%;
-            .ant-menu-item{
-                height: 60px;
-                line-height: 60px;
-            }
+            border-right: 1px #ccc solid;
         }
         .home-right{
-            width:calc(100% - 200px);
+            width:calc(100% - 300px);
             height:100%;
             padding-left:50px;
             padding-top:30px;
