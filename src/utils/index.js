@@ -21,6 +21,13 @@ export const translateMarkdown = (plainText, isGuardXss = false) => {
     })
 }
 
+export const getRandomColor = () => {
+    const colorList = ['magenta', 'red', 'volcano', 'orange', 'gold', 'lime', 'green', 'cyan', 'blue', 'geekblue', 'purple']
+    const colorIdx = Math.random() * 11
+    const color = colorList[parseInt(colorIdx)]
+    return color
+}
+
 // 获取 url query 参数
 export const decodeQuery = url => {
     const params = {}

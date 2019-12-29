@@ -2,6 +2,7 @@ import React from 'react';
 import { Icon, Tag } from 'antd';
 import './index.scss';
 import server from './index.server';
+import { getRandomColor } from '../../../utils'
 
 class Author extends React.Component {
     constructor(props) {
@@ -19,12 +20,6 @@ class Author extends React.Component {
             pageSize: 6
         })
         const tag = await server.tag();
-        const colorList = ['magenta', 'red', 'volcano', 'orange', 'gold', 'lime', 'green', 'cyan', 'blue', 'geekblue', 'geekblue', 'purple']
-        tag.forEach((item) => {
-            const colorIdx = Math.random() * 10
-            item.color = colorList[parseInt(colorIdx)]
-        })
-
         this.setState({
             list: list.rows,
             tag: tag
@@ -72,7 +67,7 @@ class Author extends React.Component {
                     <div className='list-tag'>
                         {this.state.tag.map((item, index) => {
                             return (
-                                <Tag key={index} color={item.color} className='list-item'>{item.name}</Tag>
+                                <Tag key={index} color={getRandomColor()} className='list-item'>{item.name}</Tag>
                             )
                         })}
                     </div>
