@@ -27,13 +27,14 @@
         .home-left{
             width:300px;
             height:100%;
-            border-right: 1px #ccc solid;
+            // border-right: 1px #ccc solid;
+            overflow: auto;
         }
         .home-right{
             width:calc(100% - 300px);
             height:100%;
+            overflow: auto;
             padding-left:50px;
-            padding-top:30px;
         }
     }
 }

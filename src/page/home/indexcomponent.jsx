@@ -23,7 +23,7 @@ class Home extends React.Component {
     return (
       <div id="home">
         <div className="home-top">
-          <div className="home-left"><Icon type="github" style={{ fontSize: '12px', color: '#08c', paddingRight: '10px' }} />罗晓旭的微博</div>
+          <div className="home-left"><Icon type="github" style={{ fontSize: '14px', color: '#08c', paddingRight: '10px' }} />罗晓旭的微博</div>
           <div className="home-right">
             <Menu
               onClick={this.handleClick}
